@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while read data; do
+    echo $data >> /tmp/pscp.tmp
+done
+
+scp /tmp/pscp.tmp $1
+rm /tmp/pscp.tmp
